@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+  <main>
+
+    <!-- Application Logo Section -->
+    <section id="logoApp">
+      <img src="images/logo.svg" alt="">
+    </section>
+
+    <!-- Calculator Section -->
+    <section id="tipCalculator">
+      <!-- Calculator Tool Left Panel -->
+      <div class="calculator-tool">
+        <div class="bill-amount-input">
+          <label for="billLabel">Bill</label>
+          <input type="number" placeholder="0">
+        </div>
+        <div class="tip-shortcut">
+          <label for="selectTip">Select Tip %</label>
+          <button>5%</button>
+          <button>10%</button>
+          <button>15%</button>
+          <button>20%</button>
+          <button>25%</button>
+          <button>Custom</button>
+        </div>
+        <div class="people-count">
+          <label for="numOfPeople">Number of People</label>
+          <input type="number" placeholder="0">
+        </div>
+      </div>
+
+      <!-- Calculator Display Right Panel -->
+      <div class="calculator-display">
+        <div class="tip-amount">
+          <div class="tip-amount-person">
+            <p>Tip Amount</p>
+            <span>/ person</span>
+          </div>
+          <input type="number" name="tipDisplay" placeholder="$0.00">
+        </div>
+        <div class="total-amount">
+          <div class="total-amount-person">
+            <p>total Amount</p>
+            <span>/ person</span>
+          </div>
+          <input type="number" name="totalDisplay" placeholder="$0.00">
+        </div>
+      </div>
+    </div>
+    </section>
+  </main>
+</body>
+</html>

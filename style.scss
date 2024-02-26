@@ -1,0 +1,57 @@
+@use "utils/colors" as colors;
+@use "utils/alignments" as alignments;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Mono", monospace;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: colors.$lightGrayishCyan;
+    
+    @include alignments.columnCenterAlign();
+}
+
+// Logo Stying
+
+#logoApp{
+    width: auto;
+
+    @include alignments.rowCenterAlign();
+}
+
+// Calculator Styling
+
+#tipCalculator{
+    margin-top: 80px;
+    min-width: 900px;
+    height: 450px;
+    background-color: colors.$white;
+    border-radius: 24px;
+    padding: 32px;
+
+    @include alignments.rowCenterAlign();
+    justify-content: space-between;
+
+    > .calculator-tool{
+        width: 50%;
+        height: 100%;
+
+        > input{
+            text-align: right;
+        }
+    }
+
+    > .calculator-display{
+        width: 45%;
+        height: 100%;
+        background-color: colors.$veryDarkCyan;
+        border-radius: 18px;
+    }
+}
