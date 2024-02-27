@@ -25,7 +25,7 @@ body {
 
 #tipCalculator {
   margin-top: 80px;
-  min-width: 900px;
+  width: 850px;
   height: 450px;
   background-color: hsl(0, 0%, 100%);
   border-radius: 24px;
@@ -38,15 +38,106 @@ body {
 #tipCalculator > .calculator-tool {
   width: 50%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 14px;
 }
-#tipCalculator > .calculator-tool > input {
+#tipCalculator > .calculator-tool > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  align-items: flex-start;
+}
+#tipCalculator > .calculator-tool > div > label {
+  color: hsl(186, 14%, 43%);
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+#tipCalculator > .calculator-tool > div > input {
+  width: 100%;
+  height: 40px;
   text-align: right;
+  background-color: hsl(189, 41%, 97%);
+  border: none;
+  border-radius: 4px;
+  padding: 20px;
+  font-size: 20px;
+}
+#tipCalculator > .calculator-tool > div ::placeholder {
+  color: hsl(186, 14%, 43%);
+}
+#tipCalculator > .calculator-tool > .tip-shortcut > div {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 14px;
+  row-gap: 14px;
+}
+#tipCalculator > .calculator-tool > .tip-shortcut > div > button {
+  background-color: hsl(183, 100%, 15%);
+  border: none;
+  color: hsl(0, 0%, 100%);
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 6px;
+  padding: 4px 0px;
+}
+#tipCalculator > .calculator-tool > .tip-shortcut > div > button:nth-child(6) {
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(186, 14%, 43%);
 }
 #tipCalculator > .calculator-display {
-  width: 45%;
+  width: 48%;
   height: 100%;
   background-color: hsl(183, 100%, 15%);
   border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 40px;
+}
+#tipCalculator > .calculator-display > div {
+  padding: 0px 32px;
+}
+#tipCalculator > .calculator-display > div > div {
+  color: hsl(0, 0%, 100%);
+}
+#tipCalculator > .calculator-display > .tip-amount {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+#tipCalculator > .calculator-display > .tip-amount > input {
+  width: 40%;
+  height: 60px;
+  background-color: transparent;
+  border: none;
+  font-size: 38px;
+}
+#tipCalculator > .calculator-display > .total-amount {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+#tipCalculator > .calculator-display > .total-amount > input {
+  width: 40%;
+  height: 60px;
+  background-color: transparent;
+  border: none;
+  font-size: 38px;
 }
 
 /*# sourceMappingURL=style.css.map */

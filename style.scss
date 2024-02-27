@@ -30,7 +30,7 @@ body{
 
 #tipCalculator{
     margin-top: 80px;
-    min-width: 900px;
+    width: 850px;
     height: 450px;
     background-color: colors.$white;
     border-radius: 24px;
@@ -42,16 +42,109 @@ body{
     > .calculator-tool{
         width: 50%;
         height: 100%;
+        @include alignments.columnCenterAlign();
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 14px;
 
-        > input{
-            text-align: right;
+        > div{
+            @include alignments.columnCenterAlign();
+            width: 100%;
+            align-items: flex-start;
+
+            > label{
+                color: colors.$darkGrayishCyan;
+                font-size: 14px;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+
+            > input{
+                width: 100%;
+                height: 40px;
+                text-align: right;
+                background-color: colors.$veryLightGrayishCyan;
+                border: none;
+                border-radius: 4px;
+                padding: 20px;
+                font-size: 20px;
+            }
+
+            ::placeholder{
+                color: colors.$darkGrayishCyan;
+            }
+        }
+
+        > .tip-shortcut{
+
+            > div{
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                column-gap: 14px;
+                row-gap: 14px;
+
+                > button{
+                    background-color: colors.$veryDarkCyan;
+                    border: none;
+                    color: colors.$white;
+                    font-size: 24px;
+                    font-weight: 700;
+                    border-radius: 6px;
+                    padding: 4px 0px;
+                }
+
+                > button:nth-child(6){
+                    background-color: colors.$veryLightGrayishCyan;
+                    color: colors.$darkGrayishCyan;
+                }
+            }
         }
     }
 
     > .calculator-display{
-        width: 45%;
+        width: 48%;
         height: 100%;
         background-color: colors.$veryDarkCyan;
         border-radius: 18px;
+        @include alignments.columnCenterAlign();
+        justify-content: flex-start;
+        padding-top: 40px;
+
+        > div{
+            padding: 00px 32px;
+
+            > div{
+                color: colors.$white;
+            }
+        }
+
+        > .tip-amount{
+            width: 100%;
+            @include alignments.rowCenterAlign();
+            justify-content: space-between;
+
+            > input{
+                width: 40%;
+                height: 60px;
+                background-color: transparent;
+                border: none;
+                font-size: 38px;
+            }
+        }
+
+        > .total-amount{
+            width: 100%;
+            @include alignments.rowCenterAlign();
+            justify-content: space-between;
+
+            > input{
+                width: 40%;
+                height: 60px;
+                background-color: transparent;
+                border: none;
+                font-size: 38px;
+            }
+        }
     }
 }
