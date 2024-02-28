@@ -22,22 +22,31 @@
       <div class="calculator-tool">
         <div class="bill-amount-input">
           <label for="billLabel">Bill</label>
-          <input type="number" placeholder="0">
+          <div class="input-icon">
+            <img src="images/icon-dollar.svg" alt="">
+            <input id="billAmount" name="billAmount" type="text" placeholder="0" inputmode="numeric" />
+          </div>
         </div>
         <div class="tip-shortcut">
           <label for="selectTip">Select Tip %</label>
           <div>
-            <button>5%</button>
-            <button>10%</button>
-            <button>15%</button>
-            <button>25%</button>
-            <button>50%</button>
-            <button>Custom</button>
+            <button class="tip-button" value="5">5%</button>
+            <button class="tip-button" value="10">10%</button>
+            <button class="tip-button" value="15">15%</button>
+            <button class="tip-button" value="25">25%</button>
+            <button class="tip-button" value="50">50%</button>
+            <button class="tip-button" value="5">Custom</button>
           </div>
         </div>
         <div class="people-count">
-          <label for="numOfPeople">Number of People</label>
-          <input type="number" placeholder="0">
+          <div class="number-people-error">
+            <label for="numOfPeople">Number of People</label>
+            <label id="errorMessage" for="error-message">Can't be zero</label>
+          </div>
+          <div class="input-icon">
+            <img src="images/icon-person.svg" alt="">
+            <input id="numOfPeople" name="numOfPeople" type="text" placeholder="0" inputmode="numeric" />
+          </div>
         </div>
       </div>
 
@@ -48,18 +57,21 @@
             <p>Tip Amount</p>
             <span>/ person</span>
           </div>
-          <input type="number" name="tipDisplay" placeholder="$0.00">
+          <input type="number" name="tipDisplay" placeholder="$0.00" readonly>
         </div>
         <div class="total-amount">
           <div class="total-amount-person">
             <p>Total</p>
             <span>/ person</span>
           </div>
-          <input type="number" name="totalDisplay" placeholder="$0.00">
+          <input type="number" name="totalDisplay" placeholder="$0.00" readonly>
         </div>
+        <button id="reset">RESET</button>
       </div>
     </div>
     </section>
   </main>
+
+  <script type="module" src="script.js"></script>
 </body>
 </html>

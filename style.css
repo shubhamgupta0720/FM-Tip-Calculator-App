@@ -26,10 +26,11 @@ body {
 #tipCalculator {
   margin-top: 80px;
   width: 850px;
-  height: 450px;
+  height: 460px;
   background-color: hsl(0, 0%, 100%);
   border-radius: 24px;
   padding: 32px;
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,18 +61,33 @@ body {
   font-weight: 700;
   margin-bottom: 10px;
 }
-#tipCalculator > .calculator-tool > div > input {
+#tipCalculator > .calculator-tool > div > div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#tipCalculator > .calculator-tool > div > div > input {
   width: 100%;
   height: 40px;
   text-align: right;
+  color: hsl(183, 100%, 15%);
   background-color: hsl(189, 41%, 97%);
   border: none;
   border-radius: 4px;
   padding: 20px;
   font-size: 20px;
+  font-weight: 600;
 }
-#tipCalculator > .calculator-tool > div ::placeholder {
+#tipCalculator > .calculator-tool > div > div > input:hover {
+  cursor: pointer;
+}
+#tipCalculator > .calculator-tool > div > div ::placeholder {
   color: hsl(186, 14%, 43%);
+}
+#tipCalculator > .calculator-tool > div > div > img {
+  position: absolute;
+  margin-right: 320px;
 }
 #tipCalculator > .calculator-tool > .tip-shortcut > div {
   width: 100%;
@@ -86,24 +102,64 @@ body {
   color: hsl(0, 0%, 100%);
   font-size: 24px;
   font-weight: 700;
-  border-radius: 6px;
+  border-radius: 5px;
   padding: 4px 0px;
+}
+#tipCalculator > .calculator-tool > .tip-shortcut > div > button:hover {
+  cursor: pointer;
 }
 #tipCalculator > .calculator-tool > .tip-shortcut > div > button:nth-child(6) {
   background-color: hsl(189, 41%, 97%);
   color: hsl(186, 14%, 43%);
 }
+#tipCalculator > .calculator-tool > .people-count > .number-people-error {
+  width: 100%;
+  justify-content: space-between;
+}
+#tipCalculator > .calculator-tool > .people-count > .number-people-error > label {
+  color: hsl(186, 14%, 43%);
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+#tipCalculator > .calculator-tool > .people-count > .number-people-error > label:nth-child(2) {
+  display: none;
+  color: rgb(250, 94, 94);
+}
 #tipCalculator > .calculator-display {
   width: 48%;
   height: 100%;
   background-color: hsl(183, 100%, 15%);
-  border-radius: 18px;
+  border-radius: 16px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   justify-content: flex-start;
   padding-top: 40px;
+}
+#tipCalculator > .calculator-display > button {
+  margin-top: 136px;
+  padding: 4px;
+  width: 80%;
+  background-color: hsl(183, 100%, 23%);
+  border: none;
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: 700;
+  color: hsl(183, 100%, 15%);
+}
+#tipCalculator > .calculator-display .active {
+  background-color: hsl(172, 67%, 45%);
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+#tipCalculator > .calculator-display .active:hover {
+  background-color: hsl(172, 100%, 69%);
+}
+#tipCalculator > .calculator-display .disabled {
+  background-color: hsl(183, 100%, 23%);
+  transition: 0.4s ease;
 }
 #tipCalculator > .calculator-display > div {
   padding: 0px 32px;
@@ -124,8 +180,23 @@ body {
   background-color: transparent;
   border: none;
   font-size: 38px;
+  font-weight: 700;
+  color: hsl(172, 67%, 45%);
+}
+#tipCalculator > .calculator-display > .tip-amount ::placeholder {
+  color: hsl(172, 67%, 45%);
+}
+#tipCalculator > .calculator-display > .tip-amount > div > p {
+  font-weight: 600;
+  font-size: 14px;
+}
+#tipCalculator > .calculator-display > .tip-amount > div > span {
+  font-weight: 600;
+  font-size: 12px;
+  color: hsl(184, 14%, 56%);
 }
 #tipCalculator > .calculator-display > .total-amount {
+  margin-top: 20px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -138,6 +209,20 @@ body {
   background-color: transparent;
   border: none;
   font-size: 38px;
+  font-weight: 700;
+  color: hsl(172, 67%, 45%);
+}
+#tipCalculator > .calculator-display > .total-amount ::placeholder {
+  color: hsl(172, 67%, 45%);
+}
+#tipCalculator > .calculator-display > .total-amount > div > p {
+  font-weight: 600;
+  font-size: 14px;
+}
+#tipCalculator > .calculator-display > .total-amount > div > span {
+  font-weight: 600;
+  font-size: 12px;
+  color: hsl(184, 14%, 56%);
 }
 
 /*# sourceMappingURL=style.css.map */
