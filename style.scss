@@ -306,11 +306,15 @@ body{
                     width: 100%;
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
-                    column-gap: 14px;
-                    row-gap: 14px;
+                    column-gap: 16px;
+                    row-gap: 16px;
 
                     > button{
                         padding: 6px 0px;
+                    }
+
+                    > input{
+                        text-align: center;
                     }
                 }
             }

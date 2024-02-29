@@ -272,11 +272,14 @@ body {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 14px;
-    row-gap: 14px;
+    column-gap: 16px;
+    row-gap: 16px;
   }
   #tipCalculator > .calculator-tool > .tip-shortcut > div > button {
     padding: 6px 0px;
+  }
+  #tipCalculator > .calculator-tool > .tip-shortcut > div > input {
+    text-align: center;
   }
   #tipCalculator > .calculator-display {
     width: 100%;
