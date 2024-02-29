@@ -35,7 +35,7 @@
             <button class="tip-button" value="15">15%</button>
             <button class="tip-button" value="25">25%</button>
             <button class="tip-button" value="50">50%</button>
-            <button class="tip-button" value="5">Custom</button>
+            <input type="number" id="customTipInput" placeholder="Custom" min="1" max="100" inputmode="numeric">
           </div>
         </div>
         <div class="people-count">
@@ -57,14 +57,14 @@
             <p>Tip Amount</p>
             <span>/ person</span>
           </div>
-          <input type="number" name="tipDisplay" placeholder="$0.00" readonly>
+          <input id="tipDisplay" type="text" name="tipDisplay" placeholder="$0.00" readonly>
         </div>
         <div class="total-amount">
           <div class="total-amount-person">
             <p>Total</p>
             <span>/ person</span>
           </div>
-          <input type="number" name="totalDisplay" placeholder="$0.00" readonly>
+          <input id="totalDisplay" type="text" name="totalDisplay" placeholder="$0.00" readonly>
         </div>
         <button id="reset">RESET</button>
       </div>
