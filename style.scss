@@ -116,9 +116,9 @@ body{
                     }
                 }
 
-                > button:nth-child(6){
-                    background-color: colors.$veryLightGrayishCyan;
-                    color: colors.$darkGrayishCyan;
+                > #customTipInput{
+                    padding: 21px 0px;
+                    text-align: center;
                 }
             }
         }
@@ -313,8 +313,9 @@ body{
                         padding: 6px 0px;
                     }
 
-                    > input{
+                    > #customTipInput{
                         text-align: center;
+                        padding: 23px 0px;
                     }
                 }
             }

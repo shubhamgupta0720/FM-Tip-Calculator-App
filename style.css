@@ -109,9 +109,9 @@ body {
   background-color: hsl(172, 67%, 45%);
   cursor: pointer;
 }
-#tipCalculator > .calculator-tool > .tip-shortcut > div > button:nth-child(6) {
-  background-color: hsl(189, 41%, 97%);
-  color: hsl(186, 14%, 43%);
+#tipCalculator > .calculator-tool > .tip-shortcut > div > #customTipInput {
+  padding: 21px 0px;
+  text-align: center;
 }
 #tipCalculator > .calculator-tool > .people-count > .number-people-error {
   width: 100%;
@@ -278,8 +278,9 @@ body {
   #tipCalculator > .calculator-tool > .tip-shortcut > div > button {
     padding: 6px 0px;
   }
-  #tipCalculator > .calculator-tool > .tip-shortcut > div > input {
+  #tipCalculator > .calculator-tool > .tip-shortcut > div > #customTipInput {
     text-align: center;
+    padding: 23px 0px;
   }
   #tipCalculator > .calculator-display {
     width: 100%;
