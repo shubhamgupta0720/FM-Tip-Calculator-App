@@ -31,6 +31,27 @@ tipButtons.forEach(button => {
       });
       button.style.backgroundColor = 'hsl(172, 67%, 45%)';
       button.style.color = 'hsl(183, 100%, 15%)';
+      numOfPeople.addEventListener('input', () => {
+        if(numOfPeople.value == "" || numOfPeople.value == "0"){
+          errorMessage.style.display = "block";
+          numOfPeople.style.border = "1px solid";
+          numOfPeople.style.borderColor = "rgb(250, 94, 94)";
+          resetButton.classList.remove('active');
+          resetButton.classList.add('disabled');
+        }
+        else if((numOfPeople.value != "" || numOfPeople.value != "0") && tipValue.value != ""){
+          errorMessage.style.display = "none";
+          numOfPeople.style.border = "none";
+          var totalTipPerPerson = (Number(billAmount.value) * (Number(tipValue) / 100)) / Number(numOfPeople.value);
+          console.log(totalTipPerPerson);
+          var totalBillPerPerson = (Number(billAmount.value) / Number(numOfPeople.value)) + Number(totalTipPerPerson);
+          console.log(totalBillPerPerson);
+          document.getElementById("tipDisplay").value = "$" + String(totalTipPerPerson.toFixed(2));
+          document.getElementById("totalDisplay").value = "$" + String(totalBillPerPerson.toFixed(2));
+          resetButton.classList.remove('disabled');
+          resetButton.classList.add('active');
+        }
+      })
       if(numOfPeople.value == "" || numOfPeople.value == "0"){
         errorMessage.style.display = "block";
         numOfPeople.style.border = "1px solid";
@@ -103,4 +124,15 @@ customTipInput.addEventListener('input', () => {
     resetButton.classList.remove('disabled');
     resetButton.classList.add('active');
   }
-});
+  else if((numOfPeople.value != "" || numOfPeople.value != "0") && tipValue.value == ""){
+    errorMessage.style.display = "none";
+    numOfPeople.style.border = "none";
+    var totalTipPerPerson = (Number(billAmount.value) * (Number(tipValue) / 100)) / Number(numOfPeople.value);
+    console.log(totalTipPerPerson);
+    var totalBillPerPerson = (Number(billAmount.value) / Number(numOfPeople.value)) + Number(totalTipPerPerson);
+    console.log(totalBillPerPerson);
+    document.getElementById("tipDisplay").value = "$" + String(totalTipPerPerson.toFixed(2));
+    document.getElementById("totalDisplay").value = "$" + String(totalBillPerPerson.toFixed(2));
+    resetButton.classList.remove('disabled');
+    resetButton.classList.add('active');
+  }});
